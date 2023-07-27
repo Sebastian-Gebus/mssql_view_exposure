@@ -1,6 +1,6 @@
 Simple basic-auth secured NodeJS API server for exposure MS SQL views based on logged-in SQL user`s permissions.
 
-<h4>How it works?<h4>
+<h4>How it works?</h4>
 
 Application connects to the MS SQL server given in the configuration file <code>config.js</code> and retrieves views available for the logged-in user.</br>
 Data from the views can be then retrieved by a simple GET request to <code>host:port/:viewName</code>, or using POST method, if view contains column named <code>API_FilterDate</code> - in such case, a where clause is used in SQL query, to filter results by the date range sent in the request body.
